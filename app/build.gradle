@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.0"
+
+    defaultConfig {
+        applicationId "com.anthonycaliendo.twitterclient"
+        minSdkVersion 16
+        targetSdkVersion 23
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+repositories {
+    jcenter()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+    compile 'com.android.support:design:23.0.1'
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'com.android.support:support-v4:23.1.0'
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.loopj.android:android-async-http:1.4.8'
+    compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+    compile 'org.ocpsoft.prettytime:prettytime:3.2.7.Final'
+    compile('com.github.afollestad.material-dialogs:core:0.8.5.0@aar') {
+        transitive = true
+    }
+}
