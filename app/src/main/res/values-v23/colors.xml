@@ -6,5 +6,5 @@
     <color name="textColorPrimary">#FFFFFF</color>
 
     <color name="tweeterName">#000000</color>
-    <color name="tweeterUsername">#8899a6</color>
+    <color name="tweetInfo">#8899a6</color>
 </resources>

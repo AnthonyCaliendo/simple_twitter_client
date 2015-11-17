@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/profile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:titleTextColor="@color/textColorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+            <RelativeLayout
+                android:id="@+id/profile_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/profile_toolbar"
+                android:background="@color/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/profile_background_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_alignParentTop="true" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="7dp"/>
+
+                    <TextView
+                        android:id="@+id/profile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/profile_image"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/profile_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/profile_name"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="3dp"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/profile_tweets_count_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_header"
+                android:textColor="@color/tweetInfo"
+                android:textSize="10sp"
+                android:layout_alignParentLeft="true"
+                android:text="@string/profile_tweets_count"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/profile_following_count_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_header"
+                android:textColor="@color/tweetInfo"
+                android:textSize="10sp"
+                android:text="@string/profile_following_count"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/profile_followers_count_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_header"
+                android:textColor="@color/tweetInfo"
+                android:textSize="10sp"
+                android:layout_alignParentRight="true"
+                android:text="@string/profile_followers_count"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/profile_tweet_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_tweets_count_label"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/profile_following_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_following_count_label"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/profile_followers_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_followers_count_label"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"/>
+
+            <ProgressBar
+                android:id="@+id/tweetlist_loading_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_marginTop="?attr/actionBarSize"
+                style="@android:style/Widget.ProgressBar.Large.Inverse"
+                android:indeterminate="true" />
+
+            <TextView
+                android:id="@+id/tweetlist_network_error_message"
+                android:hint="@string/timeline_unable_to_network_unavailable_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/profile_tweets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_tweet_count"
+                android:layout_marginTop="7dp"/>
+
+
+
+</RelativeLayout>

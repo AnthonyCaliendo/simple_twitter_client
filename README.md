@@ -1,42 +1,45 @@
-# Project 3 - Simple Twitter Client
+# Project 4 - Simple Twitter Client
 
-Simple Twitter Client is an android app that allows a user to view his Twitter timeline and post a new tweet. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
+Simple Twitter Client is an android app that allows a user to view home and mentions timelines, view user profiles with user timelines, as well as compose and post a new tweet. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
 
-Time spent: 6 hours spent in total
+Time spent: 8 hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-* [x]	User can **sign in to Twitter** using OAuth login
-* [x]	User can **view tweets from their home timeline**
-  * [x] User is displayed the username, name, and body for each tweet
-  * [x] User is displayed the [relative timestamp](https://gist.github.com/nesquena/f786232f5ef72f6e10a7) for each tweet "8m", "7h"
-  * [x] User can view more tweets as they scroll with [infinite pagination](http://guides.codepath.com/android/Endless-Scrolling-with-AdapterViews). Number of tweets is unlimited.
-    However there are [Twitter Api Rate Limits](https://dev.twitter.com/rest/public/rate-limiting) in place.
-* [x] User can **compose and post a new tweet**
-  * [x] User can click a “Compose” icon in the Action Bar on the top right
-  * [x] User can then enter a new tweet and post this to twitter
-  * [x] User is taken back to home timeline with **new tweet visible** in timeline
+* [x] The app includes **all required user stories** from Week 3 Twitter Client
+* [x] User can **switch between Timeline and Mention views using tabs**
+  * [x] User can view their home timeline tweets.
+  * [x] User can view the recent mentions of their username.
+* [x] User can navigate to **view their own profile**
+  * [x] User can see picture, tagline, # of followers, # of following, and tweets on their profile.
+* [x] User can **click on the profile image** in any tweet to see **another user's** profile.
+ * [x] User can see picture, tagline, # of followers, # of following, and tweets of clicked user.
+ * [x] Profile view includes that user's timeline
+* [x] User can [infinitely paginate](http://guides.codepath.com/android/Endless-Scrolling-with-AdapterViews) any of these timelines (home, mentions, user) by scrolling to the bottom
 
 The following **optional** features are implemented:
 
-* [x] User can **see a counter with total number of characters left for tweet** on compose tweet page
-* [x] User can **click a link within a tweet body** on tweet details view. The click will launch the web browser with relevant page opened.
-* [x] User can **pull down to refresh tweets timeline**
-* [ ] User can **open the twitter app offline and see last loaded tweets**. Persisted in SQLite tweets are refreshed on every application launch. While "live data" is displayed when app can get it from Twitter API, it is also saved for use in offline mode.
-* [ ] User can tap a tweet to **open a detailed tweet view**
-* [ ] User can **select "reply" from detail view to respond to a tweet**
-* [x] Improve the user interface and theme the app to feel "twitter branded"
+* [ ] User can view following / followers list through the profile
+* [x] Implements robust error handling, [check if internet is available](http://guides.codepath.com/android/Sending-and-Managing-Network-Requests#checking-for-network-connectivity), handle error cases, network failures
+* [x] When a network request is sent, user sees an [indeterminate progress indicator](http://guides.codepath.com/android/Handling-ProgressBars#progress-within-actionbar)
+* [ ] User can **"reply" to any tweet on their home timeline**
+  * [ ] The user that wrote the original tweet is automatically "@" replied in compose
+* [ ] User can click on a tweet to be **taken to a "detail view"** of that tweet
+ * [ ] User can take favorite (and unfavorite) or retweet actions on a tweet
+* [x] Improve the user interface and theme the app to feel twitter branded
+* [ ] User can **search for tweets matching a particular query** and see results
 
 The following **bonus** features are implemented:
 
-* [x] User can see embedded image media within the tweet detail view
-* [x] Compose tweet functionality is build using modal overlay
+* [ ] User can view their direct messages (or send new ones)
 
 The following **additional** features are implemented:
 
-* robust error handling
+* [x] displays the logged in user's profile image as the icon in the toolbar
+* [x] handles displays timelines for users with no tweets
+* [x] works around Twitter bug around max_id with a query that returns only a single result (which is the max id)
 
 ## Video Walkthrough 
 
@@ -48,7 +51,10 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-The skeleton oauth project is not compatible with asynchttp 1.4.9, which wasted a lot of my time debugging (it requires 1.4.8).
+* Spent a significant amount of time dealing with an issue where tweets would not display (width and height were zero).  The issue ended up being an issue with SwipRefreshLayout with multiple children and relative layout.
+* The notes for this assignment indicated that we should use `app:tabMode="scrollable"` for the `TabLayout`, but that resulted in my tabs not taking up the full width.  I spent a bit of time figuring out I needed to set it to `app:tabMode="fixed"`.
+* These issues resulted in a lot of time mucking with the UI, instead of implementing features.
+
 
 ## Open-source libraries used
 
@@ -57,7 +63,7 @@ The skeleton oauth project is not compatible with asynchttp 1.4.9, which wasted 
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2015 Anthony Caliendo
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

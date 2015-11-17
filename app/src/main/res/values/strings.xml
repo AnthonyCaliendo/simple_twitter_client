@@ -8,16 +8,32 @@
     <string name="login_unable_to_login_error_message">Unable to log into twitter</string>
     <string name="login_unable_to_network_unavailable_message">Unable to connect to Twitter.\nPlease try again later.</string>
 
-    <!-- home timeline -->
-    <string name="hometimeline_title">Home</string>
-    <string name="hometimeline_menu_new_tweet">Compose</string>
-    <string name="hometimeline_unable_to_load_tweets_error_message">Unable to load tweets</string>
-    <string name="hometimeline_unable_to_network_unavailable_message">Unable to connect to Twitter.\nPlease try again later.</string>
+    <!-- timelines -->
+    <string name="timeline_title"></string>
+    <string name="timeline_menu_new_tweet">Compose</string>
+    <string name="timeline_unable_to_load_tweets_error_message">Unable to load tweets</string>
+    <string name="timeline_unable_to_network_unavailable_message">Unable to connect to Twitter.\nPlease try again later.</string>
+    <string name="timeline_home_title">Home</string>
+    <string name="timeline_mentions_title">Mentions</string>
+    <string name="timeline_unable_to_load_user_profile">Unable to load your profile information.</string>
 
     <!-- new tweet -->
     <string name="new_tweet_title">Compose</string>
     <string name="new_tweet_body">What\'s happening?</string>
     <string name="new_tweet_save">Tweet</string>
     <string name="new_tweet_cancel">Cancel</string>
-    <string name="hometimeline_unable_to_post_tweet_error_message">Unable to tweet. Try again.</string>
+    <string name="new_tweet_unable_to_post_tweet_error_message">Unable to tweet. Try again.</string>
+
+    <!-- home timeline -->
+    <string name="home_no_tweets">No tweets in your home timeline.</string>
+
+    <!-- mentions timeline -->
+    <string name="mentions_no_tweets">Sorry, you have no mentions.</string>
+
+    <!-- profile view -->
+    <string name="profile_title"></string>
+    <string name="profile_tweets_count">Tweets</string>
+    <string name="profile_followers_count">Followers</string>
+    <string name="profile_following_count">Following</string>
+    <string name="profile_no_tweets">This user has no tweets.</string>
 </resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/timeline_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <ProgressBar
+        android:id="@+id/tweetlist_loading_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_marginTop="?attr/actionBarSize"
+        style="@android:style/Widget.ProgressBar.Large.Inverse"
+        android:indeterminate="true"
+        android:layout_below="@id/timeline_toolbar"/>
+
+    <TextView
+        android:id="@+id/tweetlist_network_error_message"
+        android:hint="@string/timeline_unable_to_network_unavailable_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_below="@id/timeline_toolbar"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/timeline_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TimelineTextAppearance"
+        app:tabMode="fixed"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        android:layout_below="@id/timeline_toolbar"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/timeline_tabs_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:layout_below="@id/timeline_tabs"/>
+</RelativeLayout>

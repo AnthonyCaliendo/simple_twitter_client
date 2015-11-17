@@ -22,8 +22,8 @@ import org.scribe.builder.api.TwitterApi;
 class RestClient extends OAuthBaseClient {
 	public static final Class<? extends Api> REST_API_CLASS = TwitterApi.class;
 	public static final String REST_URL                     = "https://api.twitter.com/1.1";
-	public static final String REST_CONSUMER_KEY            = "kxAM2JRwaMKVgzHUGl7hsNBUv";//"57fdgdfh345195e071f9a761d763ca0";
-	public static final String REST_CONSUMER_SECRET         = "jjpGY0xXq9llfOZs8XMaXKGFf5C32KcFlVOO96NcP3EhduECr4";//"d657sdsg34435435";
+	public static final String REST_CONSUMER_KEY            = "lqxs8Al7MAUob4gkpFN70gsoi";//"57fdgdfh345195e071f9a761d763ca0";
+	public static final String REST_CONSUMER_SECRET         = "Y3eHgKzxkWcrMBeo4b2rwdDukGtBVCKQejgOk34i7E2Z3a2JMZ";//"d657sdsg34435435";
 	public static final String REST_CALLBACK_URL            = "x-oauthflow-twitter://anthonycaliendotweets.com";//oauth://anthonycaliendotweets";
 
 	public RestClient(Context context) {

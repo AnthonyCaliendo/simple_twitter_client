@@ -138,16 +138,22 @@ public class ResponseParser {
      * @return
      *      the parsed user, or null if unable to parse
      */
-    private User parseUser(final JSONObject jsonObject) {
+    public User parseUser(final JSONObject jsonObject) {
         if (jsonObject == null) {
             return null;
         }
 
         final User user = new User();
 
-        user.username        = jsonObject.optString("screen_name");
-        user.name            = jsonObject.optString("name");
-        user.profileImageUrl = jsonObject.optString("profile_image_url");
+        user.twitterId                 = jsonObject.optLong("id");
+        user.username                  = jsonObject.optString("screen_name");
+        user.name                      = jsonObject.optString("name");
+        user.profileImageUrl           = jsonObject.optString("profile_image_url");
+        user.description               = jsonObject.optString("description");
+        user.followersCount            = jsonObject.optInt("followers_count");
+        user.followingCount            = jsonObject.optInt("friends_count");
+        user.profileBackgroundImageUrl = jsonObject.optString("profile_background_image_url");
+        user.tweetCount                = jsonObject.optInt("statuses_count");
 
         if (user.username != null) {
             user.username = "@" + user.username;

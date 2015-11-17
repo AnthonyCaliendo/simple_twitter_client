@@ -9,7 +9,7 @@
     <string name="login_unable_to_network_unavailable_message">Network is not available</string>
 
     <!-- home timeline -->
-    <string name="hometimeline_title">Home</string>
-    <string name="hometimeline_unable_to_load_tweets_error_message">Unable to load tweets</string>
+    <string name="timeline_title">Home</string>
+    <string name="timeline_unable_to_load_tweets_error_message">Unable to load tweets</string>
 
 </resources>

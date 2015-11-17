@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.anthonycaliendo.twitterclient.R;
 import com.anthonycaliendo.twitterclient.service.TwitterClient;
-import com.anthonycaliendo.twitterclient.ui.hometimeline.HometimelineActivity;
+import com.anthonycaliendo.twitterclient.ui.timeline.TimelineActivity;
 import com.codepath.oauth.OAuthLoginActionBarActivity;
 
 import static com.anthonycaliendo.twitterclient.Instrumentation.debug;
@@ -49,7 +49,7 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 
 	@Override
 	public void onLoginSuccess() {
-		final Intent intent = new Intent(this, HometimelineActivity.class);
+		final Intent intent = new Intent(this, TimelineActivity.class);
 		startActivity(intent);
 	}
 
